@@ -36,9 +36,8 @@ namespace MyBlog.Data
             article.ToTable("tblArticle");
             article.HasOne<User>(a=>a.Author).WithMany(u=>u.Articles).HasForeignKey(a=>a.AuthorId).IsRequired().OnDelete(DeleteBehavior.NoAction);
             article.HasOne<Category>(a=>a.Category).WithMany(c=>c.Articles).HasForeignKey(a=>a.CategoryId).IsRequired().OnDelete(DeleteBehavior.NoAction);
-            article.HasMany<Tag>(a=>a.Tags).WithMany(t=>t.Articles).UsingEntity(at=>at.ToTable("ArticleTag"));
+            
             article.HasMany<Comment>(a=>a.Comments).WithOne(c=>c.Article).HasForeignKey(c=>c.ArticleId);
-            article.HasMany<User>(a=>a.Likers);
 
 
             category.ToTable("tblCategory");
@@ -47,8 +46,6 @@ namespace MyBlog.Data
             
 
             tag.ToTable("tblTag");
-            tag.HasMany<Article>(t => t.Articles).WithMany(a => a.Tags)
-            .UsingEntity(at => at.ToTable("ArticleTag"));
 
             comment.ToTable("tblComment");
 
@@ -57,6 +54,20 @@ namespace MyBlog.Data
 
             comment.HasOne<Article>( c => c.Article).WithMany(a => a.Comments)
             .HasForeignKey(c => c.ArticleId);
+
+            modelBuilder.Entity<ArticleTag>(entity=>{
+                entity.ToTable("tblArticleTag");
+                entity.HasKey(j=> new{j.ArticleId,j.TagId});
+                entity.HasOne(at=>at.Article).WithMany(j=>j.ArticleTags).HasForeignKey(j=>j.ArticleId);
+                entity.HasOne(at=>at.Tag).WithMany(j=>j.ArticleTags).HasForeignKey(j=>j.TagId);
+            });
+
+            modelBuilder.Entity<ArticleLiker>(entity=>{
+                entity.ToTable("tblrticleLiker");
+                entity.HasKey(j=> new{j.ArticleId,j.UserId});
+                entity.HasOne(a=>a.Article).WithMany(al=>al.ArticleLikers).HasForeignKey(al=>al.ArticleId);
+                entity.HasOne(u=>u.User).WithMany(al=>al.ArticleLikers).HasForeignKey(al=>al.UserId);
+            });
         }
     }
 }

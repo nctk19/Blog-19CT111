@@ -16,5 +16,6 @@ namespace MyBlog.Models
         public ICollection<Article> Articles{get;set;}
         public ICollection<Comment> Comments{get;set;}
         public ICollection<Category> Categories{get;set;}
+        public ICollection<ArticleLiker> ArticleLikers{get;set;}
     }
 }

@@ -2055,6 +2055,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.9",
@@ -2067,11 +2068,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\WebNC\\Blog-19CT111\\MyBlog\\MyBlog.csproj",
+      "projectUniqueName": "d:\\Blog-19CT111\\MyBlog\\MyBlog.csproj",
       "projectName": "MyBlog",
-      "projectPath": "d:\\WebNC\\Blog-19CT111\\MyBlog\\MyBlog.csproj",
+      "projectPath": "d:\\Blog-19CT111\\MyBlog\\MyBlog.csproj",
       "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
-      "outputPath": "d:\\WebNC\\Blog-19CT111\\MyBlog\\obj\\",
+      "outputPath": "d:\\Blog-19CT111\\MyBlog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2098,6 +2099,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.9, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
