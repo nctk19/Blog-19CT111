@@ -9,7 +9,7 @@ namespace MyBlog.Models
 {
     public class Article:BaseEntity
     {
-        //public String Title{get;set;}
+        public String Title{get;set;}
         public String Content{get;set;}
         public int ViewCount{get;set;}
 
