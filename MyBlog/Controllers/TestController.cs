@@ -11,6 +11,7 @@ namespace MyBlog.Controllers
         private readonly AppDbContext _context;
         public TestController(AppDbContext context) {
 
+
             _context=context;
         }
 
