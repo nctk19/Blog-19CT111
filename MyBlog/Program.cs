@@ -10,6 +10,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<ArticleRepository>();
+builder.Services.AddScoped<CommentRepository>();
 builder.Services.AddControllers();
 var policyName = "myAPPPolicy";
 builder.Services.AddCors(options =>
@@ -34,7 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
-app.UseCors();
+
 app.UseAuthorization();
 
 app.MapControllers();

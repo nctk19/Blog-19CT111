@@ -12,8 +12,6 @@ namespace MyBlog.Models
         public String Title{get;set;}
         public String Content{get;set;}
         public int ViewCount{get;set;}
-
-        [ForeignKey("Author")]
         public Guid AuthorId{get;set;}
         public User Author{get;set;}
 

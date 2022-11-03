@@ -9,14 +9,12 @@ using MyBlog.Dto.User;
 
 namespace MyBlog.Dto.Article
 {
-    public class ArticleDto
+    public class CreateArticleDto
     {
-        public Guid ID { get; set; }
+        
         public String Title{get;set;}
         public String Content{get;set;}
         public int ViewCount{get;set;}
-
-        
         public Guid AuthorId{get;set;}
 
     }

@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\Blog-19CT111\\MyBlog\\MyBlog.csproj",
         "projectName": "MyBlog",
         "projectPath": "D:\\Blog-19CT111\\MyBlog\\MyBlog.csproj",
-        "packagesPath": "C:\\Users\\LHUser\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\nctk1\\.nuget\\packages\\",
         "outputPath": "D:\\Blog-19CT111\\MyBlog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LHUser\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nctk1\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -69,7 +69,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
